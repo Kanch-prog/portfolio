@@ -1,38 +1,422 @@
-.App {
-  text-align: center;
+body {
+  margin: 0;
+  padding: 0;
+  background-color: whitesmoke;
+  box-sizing: border-box;
+  overflow-x: hidden; 
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app {
   display: flex;
   flex-direction: column;
-  align-items: center;
+}
+
+/* Define keyframes for the animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px); 
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); 
+  }
+}
+
+/* Initially hide all elements */
+.navbar,
+.main-content,
+.about-section,
+.skills-section {
+  opacity: 0;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: whitesmoke;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  z-index: 1000;
+  animation: fadeIn 0.5s ease forwards; 
+}
+
+.nav-links {
+  display: flex;
+  margin-top: 10px;
+}
+
+.nav-links a {
+  margin-left: 20px;
+  color: black;
+  text-decoration: none;
+}
+
+.nav-links a.active {
+  text-decoration: underline;
+  color: #009ccf;
+}
+
+.button {
+  background-color: white;
+  border: 2px solid #009ccf;
+  margin-right: 50px;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.button1:hover {
+  border: 2px solid #007aa9;
+  background-color: #007aa9;
+}
+
+.download-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.main-content {
+  margin-top: 150px; 
+  width: calc(100% - 195px); 
+  flex-grow: 1;
+  padding: 20px;
+  margin-left: 175px;
+  line-height: 2.0;
+  position: relative;
+  height: 100vh;
+  z-index: 1;
+  animation: fadeIn 0.5s ease forwards 0.5s;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0; 
+  bottom: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20px;
+  overflow: hidden;
+}
+
+
+.left-icons {
+  display: flex; 
+  flex-direction: column;
+  align-items: center; 
+  margin-top: 30%;
+}
+
+.left-icons::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: calc(0% + 35px); /* Adjust this value to control the position of the line */
+  width: 1px; /* Width of the line */
+  background-color: #ccc; /* Color of the line */
+  height: 20%;
+}
+
+.left-icons img {
+  width: 30px;
+  height: 30px;
+  margin-top: 20px;
+  transition: transform 0.3s ease; /* Adding transition for smooth animation */
+}
+
+.left-icons img:hover {
+  transform: scale(1.2); /* Scale up on hover */
+}
+
+.right-info p {
+  margin: 0; 
+  writing-mode: vertical-lr; /* Rotating text vertically */
+  transform: rotate(180deg); /* Rotating text vertically */
+  white-space: nowrap; /* Preventing text from wrapping */
+}
+
+.right-info {
+  display: flex; 
+  align-items: center; 
+  position: relative; /* Position the pseudo-element relative to this container */
+}
+
+.right-info::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: calc(0% + 10px); 
+  width: 1px; 
+  background-color: #ccc; 
+  height: 25%;
+}
+
+.right-info p a {
+  color: #666;
+  text-decoration: none; 
+}
+
+.right-info p a:hover {
+  color: #007aa9;
+}
+
+.left-align {
+  text-align: left;
+}
+
+.button2:hover {
+  background-color: #007aa9;
+}
+
+.ibm-plex-mono-regular {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.cutive-regular {
+  font-family: "Cutive", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 25px;
+}
+
+/* Add this CSS to about.js */
+.about-section {
+  display: flex;  
+  flex-direction: row;
+  margin-top: 10px;
+  padding: 20px;
+  line-height: 2.0;
+  animation: fadeIn 0.5s ease forwards 1s;
+}
+
+.about-section-box {
+  display: flex; 
+  width: calc(100% - 165px); 
+}
+
+.about-me {  
+  flex: 1;
+  margin-left: 160px;
+  margin-right: 5px;
+  margin-top: 20px;
+  width: 70%;
+}
+
+.about-picture {
+  flex-shrink: 0; 
+  margin-top: 100px;
+}
+
+/* Add additional styling for image and circle */
+.image-container {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.image-container img {
+  width: 60%;
+  display: block;
+  border-radius: 50%;  
+  margin-left: 100px;
+}
+
+.about-picture .image-container img {
+  animation: pulse 2s infinite alternate;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+/* Skills section */
+.skills-section {
+  margin-top: 20px;
+  margin-left: 160px;
+  animation: fadeIn 0.5s ease forwards 1.5s;   
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start; 
+  width: calc(100% - 160px);
+}
+
+.skill-item {
+  flex-basis: calc(100% - 20px); 
+  margin-bottom: 20px; 
+  margin-right: 20px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box; 
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.skill-item.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.skill-item:nth-child(4n) {
+  margin-right: 20px; 
+}
+
+.skill-item h3 {
+  margin: 0 10px; 
+  font-size: 18px;
+}
+
+.skill-item p {
+  margin: 5px 15px; 
+  font-size: 14px;
+  color: #666;
+}
+
+.skill-text {
+  display: flex;
+  flex-direction: row; 
+}
+
+/* Change color on hover */
+.skill-item:hover {
+  background-color: #f0f0f0; /* Change background color */
+  border-color: #007aa9; /* Change border color */
+}
+
+.skill-item:hover h3 {
+  color: #007aa9; /* Change heading color */
+}
+
+.skill-item:hover p {
+  color: #333; /* Change paragraph color */
+}
+
+/* portfoilo section css */
+.portfolio-section {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  margin-left: 165px;
+  padding: 20px;
+  line-height: 2.0;
+  text-align: left;
+  animation: fadeIn 0.5s ease forwards 2.0s;
+}
+
+.portfolio-section-box {
+  display: flex; 
+  flex-direction: column;
+  margin-top: 20px;
+  padding: 20px;
+  width: calc(80% - 10px); 
+}
+
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.project-card {
+  flex: 1 1 calc(20% - 20px);
+  margin: 10px;
+  perspective: 1000px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  height: 300px;
+}
+
+.project-card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.project-card:hover .project-card-inner {
+  transform: rotateY(180deg);
+}
+
+.project-card-front,
+.project-card-back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  padding: 10px;
+  box-sizing: border-box;
 }
 
-.App-link {
-  color: #61dafb;
+.project-card-front {
+  background-color: #fff;
+  z-index: 2;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.project-card-back {
+  background-color: #f0f0f0;
+  transform: rotateY(180deg);
+  z-index: 1;
+}
+
+.project-card-back img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.project-card-back p {
+  margin-top: 10px;
+}
+
+.no-underline {
+  text-decoration: none;
+  color: #666;
+} 
+
+.no-underline:hover {
+  color: #007aa9;
+}
+@media (max-width: 1200px) {
+  .project-card {
+    flex: 1 1 calc(33.33% - 20px); /* 3 cards per row */
   }
 }
+
+@media (max-width: 900px) {
+  .project-card {
+    flex: 1 1 calc(50% - 20px); /* 2 cards per row */
+  }
+}
+
+@media (max-width: 600px) {
+  .project-card {
+    flex: 1 1 calc(100% - 20px); /* 1 card per row */
+  }
+}
+
