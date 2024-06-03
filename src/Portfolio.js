@@ -8,7 +8,7 @@ const Portfolio = () => {
       title: 'Travel-Landing-page',
       description: 'Developed a dynamic landing page for a tour and travel website, featuring an auto-playing background video slider.',
       link: 'https://kanch-prog.github.io/background-video/',
-      imageUrl:`images/pic_01.png` 
+      imageUrl:`images/pic_01.PNG` 
     },
     {
       title: 'Property Search',
