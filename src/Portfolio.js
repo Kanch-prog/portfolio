@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Portfolio = () => {
-  const baseUrl = process.env.NODE_ENV === 'production' ? '/portfolio/' : '/';
+  const baseUrl = process.env.NODE_ENV === 'production' ? '/' : '/';
   
   const projects = [
     {
