@@ -2,11 +2,17 @@ import React from 'react';
 
 const Portfolio = () => {
   const projects = [
-    {
+    /*{
       title: 'Travel-Landing-page',
       description: 'Developed a dynamic landing page for a tour and travel website, featuring an auto-playing background video slider.',
-      link: 'https://kanch-prog.github.io/background-video/',
+      link: 'https://github.com/Kanch-prog/payroll_system',
       imageUrl: 'https://kanch-prog.github.io/portfolio/images/pic_01.PNG'
+    },*/
+    {
+      title: 'Laravel Payroll System',
+      description: 'A simple solution designed to streamline employee management and payroll processing.',
+      link: 'https://kanch-prog.github.io/background-video/',
+      imageUrl: 'https://kanch-prog.github.io/portfolio/images/pic_09.PNG'
     },
     {
       title: 'Property Search',
