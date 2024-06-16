@@ -15,6 +15,12 @@ const Portfolio = () => {
       imageUrl: 'https://kanch-prog.github.io/portfolio/images/pic_09.PNG'
     },
     {
+      title: 'Laravel Blog',
+      description: 'Wandering Willow is a Laravel-based web application designed for sharing and managing blog posts',
+      link: 'https://github.com/Kanch-prog/Laravel-blog',
+      imageUrl: 'https://kanch-prog.github.io/portfolio/images/pic_10.PNG'
+    },
+    {
       title: 'Property Search',
       description: 'A web application to search for properties based on various criteria',
       link: 'https://github.com/Kanch-prog/Estate-Agent/',
@@ -44,12 +50,12 @@ const Portfolio = () => {
       link: 'https://github.com/Kanch-prog/Blog-App-ML/',
       imageUrl: 'https://kanch-prog.github.io/portfolio/images/pic_06.PNG'
     },
-    {
+    /*{
       title: 'Small Social Network',
       description: 'A platform developed using Django, allowing users to connect with each other.',
       link: 'https://github.com/Kanch-prog/Social-frontend',
       imageUrl: 'https://kanch-prog.github.io/portfolio/images/pic_07.PNG'
-    },
+    },*/
     {
       title: 'Django Blogging Platform',
       description: 'A web application built using Django, to create, publish, and manage blog posts, with content management system.',
