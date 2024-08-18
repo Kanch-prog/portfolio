@@ -11,7 +11,7 @@ const Portfolio = () => {
     {
       title: 'Laravel Payroll System',
       description: 'A simple solution designed to streamline employee management and payroll processing.',
-      link: 'https://kanch-prog.github.io/background-video/',
+      link: 'https://github.com/Kanch-prog/payroll_system/',
       imageUrl: 'https://kanch-prog.github.io/portfolio/images/pic_09.PNG'
     },
     {
