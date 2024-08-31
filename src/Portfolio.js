@@ -8,12 +8,25 @@ const Portfolio = () => {
       link: 'https://github.com/Kanch-prog/payroll_system',
       imageUrl: 'https://kanch-prog.github.io/portfolio/images/pic_01.PNG'
     },*/
-    {
+    /*{
       title: 'Laravel Payroll System',
       description: 'A simple solution designed to streamline employee management and payroll processing.',
       link: 'https://github.com/Kanch-prog/payroll_system/',
       imageUrl: 'https://kanch-prog.github.io/portfolio/images/pic_09.PNG'
+    },*/
+    {
+      title: 'Classified-Ads',
+      description: 'MERN-based classified ads platform.',
+      link: 'https://github.com/Kanch-prog/classified-ads-frontend',
+      imageUrl: 'https://kanch-prog.github.io/portfolio/images/pic_13.PNG'
     },
+    {
+      title: 'Library Interface',
+      description: 'Java CRUD app for library management.',
+      link: 'https://github.com/Kanch-prog/LibraryInterface',
+      imageUrl: 'https://kanch-prog.github.io/portfolio/images/pic_14.PNG'
+    },
+    
     {
       title: 'Laravel Blog',
       description: 'Wandering Willow is a Laravel-based web application designed for sharing and managing blog posts',
