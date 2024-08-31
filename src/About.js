@@ -2,6 +2,7 @@ import React, {useEffect} from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faReact, faNodeJs, faPython, faPhp, faJs } from '@fortawesome/free-brands-svg-icons';
 import { faDatabase, faFlask } from '@fortawesome/free-solid-svg-icons';
+import { faJava } from '@fortawesome/free-brands-svg-icons'; 
 import SkillsData from './SkillsData';
 
 function About() {
