@@ -18,8 +18,8 @@ function MainContent() {
               .start();
           }}
         />
-        <p className="fade-in left-align">Passionate math educator transitioning into full-stack developer, seeking opportunities to leverage analytical prowess in MERN & Django full stack development.</p>
-        <p className="fade-in left-align">Capstone Projects</p>
+        <p className="fade-in left-align">Passionate math teacher moving into full-stack development. Skilled in MERN and Django stacks, looking for opportunities to use strong analytical skills in web development</p>
+        
         <button className="fade-in button button2 left-align">
           <a 
             href="./files/Kanchana_Resume.pdf" 
