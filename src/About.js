@@ -14,9 +14,7 @@ function About() {
     "Selenium": faFlask,
     "Python for data analysis": faPython,
     "MySQL/SQL": faDatabase,
-    "Machine Learning": faJs,
-    "Plotly and DJ3": faPython,
-    "Web crawling": faPython,
+    "Java": faJava,
   };
 
   const skillsPerRow = 4;
